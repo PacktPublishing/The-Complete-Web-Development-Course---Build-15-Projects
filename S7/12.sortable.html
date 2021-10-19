@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      sortable
+    </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+    </script>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		color: white;
+		height: 100px;
+		width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: auto;
+		width: auto;
+		padding: 10px;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: auto;
+		width: auto;
+		padding: 10px;
+	  }
+	  #great{
+		background-color: #5a3479;
+		
+	  }
+	  
+	  li{
+		font-size: 2em;
+		margin-bottom: 5px;
+		text-align: center;
+	  }
+	  .connectedList{
+		border: 1px solid #eee;
+		min-height: 20px;
+	  }
+	  
+	</style>
+  </head>
+  
+  <body>
+    <div class="bluebox ui-corner-all" id="facebook">
+      <p>
+        Facebook is 
+        <span class="great" id="great">
+          great
+        </span>
+        .
+      </p>
+      
+    </div>
+    <div class="yellowbox ui-corner-all" id="apple">
+      <ul id="list1" class="connectedList">
+        <li class="ui-state-default">
+          Audi
+        </li>
+        <li class="ui-state-default">
+          BMW
+        </li>
+        <li class="ui-state-default notSortable">
+          Mercedes
+        </li>
+      </ul>
+    </div>
+    <div class="greenbox ui-corner-all" id="microsoft">
+      <p>
+        Microsoft.
+      </p>
+      
+      <p>
+        <a id="microsoftLink" href="http://www.microsoft.com" title="Microsoft">
+          Microsoft link.
+        </a>
+      </p>
+      <ul id="list2" class="connectedList">
+        <li class="ui-state-default">
+          Ford
+        </li>
+        <li class="ui-state-default">
+          Toyota
+        </li>
+        <li class="ui-state-default notSortable">
+          Ferrari
+        </li>
+      </ul>
+    </div>
+    <script>
+      $(function(){
+        $("#list1").sortable({
+          placeholder: "ui-state-highlight",
+          cancel: ".notSortable"
+        }
+                            );
+        $("#list2").sortable();
+        $("#list1, #list2").sortable({
+          connectWith: ".connectedList"
+        }
+                                    );
+      }
+       );
+      
+    </script>
+  </body>
+  
+</html>

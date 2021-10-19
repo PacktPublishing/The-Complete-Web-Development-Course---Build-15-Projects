@@ -1,0 +1,8 @@
+Your Git Identity
+In the coming video, once you install Git. I would recommend setting your user name and e-mail address before min 03:20 using the following commands:
+
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+You need to do this only once if you pass the --global option and your name and email address will be used by default.
+
+You can override that if you like with new details for a specific project by running the same command again without the  --global option.

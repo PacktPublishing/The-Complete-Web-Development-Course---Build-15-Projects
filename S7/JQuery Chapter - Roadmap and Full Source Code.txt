@@ -1,0 +1,2 @@
+JQuery Chapter: Roadmap and Full Source Code
+Please make sure you download the '4.jQuery.pdf' file before you move to the next lectures of this chapter. It will show you the structure of the current chapter and provide you with the necessary source code that will make your learning experience easier and faster.

@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      menu
+    </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/start/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+    </script>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		color: white;
+		height: auto;
+		width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: auto;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: 100px;
+		width: auto;
+	  }
+	  .ui-menu{
+		width: 100px;
+		
+	  }
+	  
+	</style>
+  </head>
+  
+  <body>
+    <div class="bluebox ui-corner-all" id="facebook">
+      <ul id="continents">
+        <li>
+          Europe
+          <ul>
+            <li>
+              France
+            </li>
+            <li>
+              UK
+              <ul>
+                <li>
+                  England
+                </li>
+                <li>
+                  Scotland
+                </li>
+                <li>
+                  Wales
+                </li>
+                <li>
+                  Northern Ireland
+                </li>
+              </ul>
+              
+            </li>
+            <li>
+              Spain
+            </li>
+          </ul>
+        </li>
+        
+        <li>
+          Africa
+        </li>
+        
+        <li>
+          America
+        </li>
+        
+        <li>
+          Asia
+        </li>
+        
+        <li>
+          Australia
+        </li>
+        
+      </ul>
+    </div>
+    
+  <div class="yellowbox ui-corner-all" id="apple">
+    <ul id="continents2">
+      <li class="ui-widget-header">
+        Europe
+      </li>
+      <li>
+        France
+      </li>
+      <li>
+        UK
+        <ul>
+          <li>
+            England
+          </li>
+          <li>
+            Scotland
+          </li>
+          <li>
+            Wales
+          </li>
+          <li>
+            Northern Ireland
+          </li>
+        </ul>
+        
+      </li>
+      <li>
+        Spain
+      </li>
+      
+      <li class="ui-widget-header">
+        Africa
+      </li>
+      
+      <li class="ui-widget-header">
+        America
+      </li>
+      
+      <li class="ui-widget-header">
+        Asia
+      </li>
+      
+      <li class="ui-widget-header">
+        Australia
+      </li>
+      
+    </ul>
+  </div>
+  <div class="greenbox ui-corner-all" id="microsoft">
+    <p>
+      Microsoft.
+    </p>
+  </div>
+  <script>
+    $(function(){
+      $("#continents").menu();
+      $("#continents2").menu();
+    }
+     );
+    
+  </script>
+  </body>
+  
+</html>

@@ -1,0 +1,104 @@
+<!--7.ajax.html-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Ajax
+    </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		color: white;
+		height: 100px;
+		width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: 100px;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: 100px;
+		width: auto;
+	  }
+	  #great{
+		background-color: #5a3479;
+		
+	  }
+	</style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+  </head>
+  
+  <body>
+    <button>
+      Button
+    </button>
+    <div class="bluebox" id="facebook">
+      <p>
+        Facebook is 
+        <span class="great" id="great">
+          great
+        </span>
+        .
+      </p>
+      
+    </div>
+    <div class="yellowbox" id="apple">
+      <p>
+        Apple.
+      </p>
+      
+    </div>
+    <div class="greenbox" id="microsoft">
+      <p>
+        Microsoft.
+      </p>
+      
+      <p>
+        <a id="microsoftLink" href="http://www.microsoft.com" title="Microsoft">
+          Microsoft link.
+        </a>
+      </p>
+      
+    </div>
+    <p>
+      Enter your name:
+      <input>
+    </p>
+    <script>
+      $(function(){
+        $("#facebook").load("ajax/somedata.txt");
+        $("#apple").load("ajax/somedata.txt #paragraph1");
+        
+        //$("button").click(function(){
+        //    $.ajax({url : "ajax/somedata.txt", success : function(data){
+        //     $("#microsoft").html(data);   
+        //    }
+        //        
+        //    });
+        //});
+        
+        $("button").click(function(){
+          $.ajax({
+            url : "ajax/somedata.txt"}
+                ).done(function(somedata){
+            $("#microsoft").html(somedata);
+            
+          }
+                       
+                      );
+        }
+                         );
+        
+      }
+       );
+      
+    </script>
+  </body>
+  
+</html>

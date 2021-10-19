@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      datepicker
+    </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/blitzer/jquery-ui.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+    </script>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		color: white;
+		height: 100px;
+		width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: 100px;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: 100px;
+		width: auto;
+	  }
+	  #great{
+		background-color: #5a3479;
+		
+	  }
+	</style>
+  </head>
+  
+  <body>
+    <div class="bluebox ui-corner-all" id="facebook">
+      <p>
+        Flight departure date: 
+        <input id="departure">
+      </p>
+      <p>
+        Flight return date: 
+        <input id="return">
+      </p>
+    </div>
+    
+  <div class="yellowbox ui-corner-all" id="apple">
+    <p>
+      Apple.
+    </p>
+  </div>
+  <div class="greenbox ui-corner-all" id="microsoft">
+    <p>
+      Microsoft.
+    </p>
+  </div>
+  <script>
+    $(function(){
+      $("#departure").datepicker({
+        showAnim: "fadeIn",
+        changeYear: true,
+        numberOfMonths: 1,
+        dateFormat: "d M, y",
+        showOn: "button",
+        buttonImage: "images/calendar.png",
+        buttonImageOnly: true,
+        buttonText: "Choose your departure date.",
+        minDate: +1,
+        maxDate: "+12M +10D",
+        onClose: function(selectedDate){
+          $("#return").datepicker("option", "minDate", selectedDate)
+        }
+        ,
+        showWeek: true
+      }
+                                );
+      $("#return").datepicker({
+        dateFormat: "d M, y"
+      }
+                             );
+    }
+     );
+    
+  </script>
+  </body>
+  
+</html>

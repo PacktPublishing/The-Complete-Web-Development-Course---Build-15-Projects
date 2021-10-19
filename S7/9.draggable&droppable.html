@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      draggable and droppable
+    </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		color: white;
+		height: 100px;
+		width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: 100px;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: 100px;
+		width: auto;
+	  }
+	  #great{
+		background-color: #5a3479;
+		
+	  }
+	  #droppable{
+		background-color: #b513eb;
+		height: 300px;
+		width:auto;
+		margin-top: 20px;
+		color: white;
+	  }
+	</style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+  </script>
+  </head>
+  
+  <body>
+    <div class="bluebox ui-corner-all" id="facebook">
+      <p>
+        Facebook is 
+        <span class="great" id="great">
+          great
+        </span>
+        .
+      </p>
+      
+    </div>
+    <div class="yellowbox ui-corner-all" id="apple">
+      <ul id="list">
+        <li>
+          eggs
+        </li>
+        
+        <li>
+          milk
+        </li>
+        
+        <li>
+          bread
+        </li>
+        
+        
+      </ul>
+      
+    </div>
+    <div class="greenbox ui-corner-all" id="microsoft">
+      <p>
+        Microsoft.
+      </p>
+      
+      <p>
+        <a id="microsoftLink" href="http://www.microsoft.com" title="Microsoft">
+          Microsoft link.
+        </a>
+      </p>
+      
+    </div>
+    <div id="droppable" class="ui-corner-all">
+      <p>
+        You can drop things here.
+      </p>
+    </div>
+    <script>
+      var message =["Please!","Leave me alone!","Drop me!","Come on!"];
+      $(function(){
+        $("#facebook").draggable();
+        $("#apple").draggable({
+          axis: "y"
+        }
+                             );
+        $("#microsoft").draggable({
+          revert: true,
+          start: function(){
+            $("#facebook").css("background-color","#43c8d4");
+            
+          }
+          ,
+          drag: function(){
+            $("#microsoft").css("background-color",'rgb(' + Math.floor(256*Math.random()) + ',' + 256*Math.floor(256*Math.random()) + ',' + Math.floor(256*Math.random()) + ')');
+            $("#microsoft").find("p").html(message[Math.floor(4*Math.random())]);
+          }
+          ,
+          stop: function(){
+            $("#apple").css("background-color","#b1e269");
+            $("#microsoft").html('<p>Finally!</p>')
+          }
+        }
+                                 );
+        $("#droppable").droppable({
+          drop: function(event, ui){
+            $(this).css("background-color","#21dd85");
+            $(this).find("p").remove();
+            $("<li></li>").text(ui.draggable.text()).appendTo(this);
+            
+          }
+          ,
+          accept: "#list li"
+        }
+                                 );
+        $("#list").find("li").draggable({
+          helper: "clone",
+          appendTo: "body"
+        }
+                                       );
+      }
+       );
+      
+    </script>
+  </body>
+  
+</html>

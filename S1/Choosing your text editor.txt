@@ -1,0 +1,13 @@
+Choosing your text editor
+In the next lecture, you will download your favourite text editor which you will use to write code.
+
+Following are direct links which you can use to download some text editors:
+
+Brackets - https://brackets.en.softonic.com/mac/download
+Please note that On September 1, 2021, Adobe will end support for Brackets. So a new text editor will be used in the coming course update.
+
+Atom - https://atom.io/
+
+Notepad ++ (Windows) - https://notepad-plus-plus.org/downloads/
+
+Visual Studio - https://code.visualstudio.com/download

@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Select html elements
+    </title>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		color: white;
+		height: auto;
+		width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: auto;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: auto;
+		width: auto;
+	  }
+	  #great{
+		background-color: #5a3479;
+		
+	  }
+	</style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+  </head>
+  
+  <body>
+    <div class="bluebox">
+      <p>
+        Facebook is 
+        <span id="great">
+          great
+        </span>
+      </p>
+      
+      <p class="orange">
+        Paragraph2
+      </p>
+      <p>
+        Paragraph3
+      </p>
+    </div>
+    <div class="yellowbox">
+      <p>
+        Apple.
+      </p>
+      <ul>
+        <li>
+          BMW
+        </li>
+        
+        <li>
+          Audi
+        </li>
+        
+        <li>
+          Mercedes
+        </li>
+        
+      </ul>
+      <p>
+        <a href="http://www.google.com">
+          This is a link
+        </a>
+      </p>
+      <p>
+        <a href="http://www.microsoft.com">
+          This is another link
+        </a>
+      </p>
+    </div>
+    <p>
+      a paragraph
+    </p>
+    <div class="greenbox">
+      <p>
+        Microsoft.
+      </p>
+      
+      <ul>
+        <li>
+          BMW
+        </li>
+        
+        <li>
+          Audi
+        </li>
+        
+        <li>
+          Mercedes
+        </li>
+        
+      </ul>
+      <table>
+        <tr>
+          <th>
+            Phone Make
+          </th>
+          <th>
+            Model
+          </th>
+          <th>
+            Model
+          </th>
+        </tr>
+        
+        <tr>
+          <td>
+            Apple
+          </td>
+          <td>
+            Iphone 4
+          </td>
+          <td>
+            16Go
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Apple
+          </td>
+          <td>
+            Iphone 4
+          </td>
+          <td>
+            16Go
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Apple
+          </td>
+          <td>
+            Iphone 4
+          </td>
+          <td>
+            16Go
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Apple
+          </td>
+          <td>
+            Iphone 4
+          </td>
+          <td>
+            16Go
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Apple
+          </td>
+          <td>
+            Iphone 4
+          </td>
+          <td>
+            16Go
+          </td>
+        </tr>
+        
+      </table>
+      
+      <p>
+        Type your name:
+        <input>
+        <button type="submit">
+          Submit
+        </button>
+      </p>
+      
+    </div>
+    <script>
+      $(function(){
+        $("*").css("font-size", '16px');
+        
+        //$("p").css("text-align","center");
+        //$("div > p").css("text-align","center");
+        //$("div ~ p").css("text-align","center");
+        $("div  p").css("text-align","center");
+        
+        $("#great").css("background-color","#6acb57");
+        $(".orange").css("background-color","orange");
+        $("div.bluebox").css("font-family","sans-serif");
+        
+        $("p:first-child, p:last-child").css("text-decoration","underline");
+        
+        $("[href]").css("color","red");
+        
+        $("li:first-child, li:last-child").css("background-color","#bbf362");
+        
+        $("tr:even").css("background-color","#e1d446");
+        $("tr:odd").css("background-color","#811c90");
+        
+        $(":input").css("background-color","#1da492");
+        $(":Submit").css("background-color","#7979eb");
+        
+        $("div:has(table)").css("background-color","rgba( 107, 180, 198, 0.697 )");
+      }
+       );
+    </script>
+  </body>
+  
+  
+</html>

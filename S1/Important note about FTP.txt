@@ -1,0 +1,21 @@
+Important note about FTP
+The next video comes in two versions:
+
+Cyberduck (Compatible with Mac, Windows)
+
+FileZilla (Compatible with Mac, Windows, Linux)
+
+You can find a detailed comparison here: https://www.slant.co/versus/1711/5954/~cyberduck_vs_filezilla
+
+These are tools which will help you upload your files to a server and share your websites with the world.
+
+You can choose the one you prefer.
+
+I suggest watching both videos, then deciding which tool you are the most comfortable with. (PS: I prefer Cyberduck for its simplicity)
+
+
+
+Feel free to use other tools if you like. Here is an alternative:
+
+Duck - https://duck.sh/ 
+(Compatible with Mac, Windows, Linux)

@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      jquery ui introduction
+    </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		color: white;
+		height: 100px;
+		width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: 100px;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: 100px;
+		width: auto;
+	  }
+	  #great{
+		background-color: #5a3479;
+		
+	  }
+	</style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/blitzer/jquery-ui.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+  </script>
+  </head>
+  
+  <body>
+    <div class="bluebox ui-corner-all" id="facebook">
+      <p>
+        Facebook is 
+        <span class="great" id="great">
+          great
+        </span>
+        .
+      </p>
+      
+    </div>
+    <div class="yellowbox ui-corner-all" id="apple">
+      <p>
+        Apple.
+      </p>
+      
+    </div>
+    <div class="greenbox ui-corner-all" id="microsoft">
+      <p>
+        Microsoft.
+      </p>
+      
+      <p>
+        <a id="microsoftLink" href="http://www.microsoft.com" title="Microsoft">
+          Microsoft link.
+        </a>
+      </p>
+      
+    </div>
+    <div class="ui-state-error" style="height:100px;margin-top:20px">
+      <p>
+        Error Message.
+      </p>
+      
+    </div>
+    <script>
+      $(function(){
+        $("#facebook").draggable();
+      }
+       );
+      
+    </script>
+  </body>
+  
+</html>

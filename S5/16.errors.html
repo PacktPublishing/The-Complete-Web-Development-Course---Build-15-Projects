@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      errors
+    </title>
+    <style>
+      #error{
+        color: #d36363;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Your password should contain at least 6 characters, 1 number and 1 capital letter:
+    </p>
+    <p>
+      Enter Password:
+      <br />
+      <input id="password" type="password">
+    </p>
+    <p>
+      Re-enter Password:
+      <br />
+      <input id="password2" type="password">
+    </p>
+    <button onclick="check()">
+      Submit
+    </button>
+    <p id="error">
+    </p>
+    <script >
+      //try{
+      //sum(3,4);
+      //}
+      //catch(err){
+      //document.getElementById("error").innerHTML = err.message;    
+      //}
+      function check(){
+        var password = document.getElementById("password").value;
+        
+        var password2 = document.getElementById("password2").value;
+        var errorMessage = document.getElementById("error");
+        var errorTOThrow = "";
+        try{
+          
+          if(password.length<6){
+            errorTOThrow += "<br /> Password too short.";
+          }
+          if(/[A-Z]/g.test(password) == false){
+            errorTOThrow += "<br /> Password should include at least one capital letter.";
+          }
+          if(/\d/g.test(password) == false){
+            errorTOThrow += "<br /> Password should include at least one digit.";
+          }
+          if(password != password2){
+            errorTOThrow += "<br /> Passwords should match.";
+          }
+          throw errorTOThrow;
+        }
+        catch(err){
+          errorMessage.innerHTML = err;
+        }
+      }
+    </script>
+  </body>
+  
+</html>

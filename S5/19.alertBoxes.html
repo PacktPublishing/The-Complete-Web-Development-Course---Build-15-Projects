@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Alert boxes
+    </title>
+  </head>
+  <body>
+    <p id="myParagraph">
+      Javascript.
+    </p>
+    <script >
+      //window.alert("Welcome to our page!");
+      
+      var acceptCookies = window.confirm("Please confirm you accept cookies");
+      if(acceptCookies == true){
+        window.alert("You confirmed you accept cookies.");
+        
+      }
+      else{
+        window.alert("You do not accept cookies.");
+        
+      }
+      
+      var visitor = prompt("Please enter your name.");
+      window.alert("Hi " + visitor.toUpperCase() + ", we wish you a nice exprerience on our page! Don't forget to like us on Facebook!");
+    </script>
+  </body>
+  
+</html>

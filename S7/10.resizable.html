@@ -1,0 +1,102 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      draggable and droppable
+    </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		color: white;
+		height: 100px;
+		width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: 100px;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: 100px;
+		width: auto;
+	  }
+	  #great{
+		background-color: #5a3479;
+		
+	  }
+	  #container{
+		width: 300px;
+		height: 300px;
+		border-style: dotted;
+	  }
+	  
+	</style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+  </script>
+  </head>
+  
+  <body>
+    <div class="bluebox ui-corner-all" id="facebook">
+      <p>
+        Facebook is 
+        <span class="great" id="great">
+          great
+        </span>
+        .
+      </p>
+      
+    </div>
+    
+    <div id="container">
+      <div class="yellowbox ui-corner-all" id="apple">
+        <p>
+          Apple.
+        </p>
+      </div>
+    </div>
+    <div class="greenbox ui-corner-all" id="microsoft">
+      <p>
+        Microsoft.
+      </p>
+      
+      <p>
+        <a id="microsoftLink" href="http://www.microsoft.com" title="Microsoft">
+          Microsoft link.
+        </a>
+      </p>
+      
+    </div>
+    <script>
+      $(function(){
+        $("#facebook").resizable({
+          maxHeight: 200,
+          minHeight: 50,
+          minWidth: 100,
+          maxWidth: 300,
+          aspectRatio: 4/3,
+          ghost: true,
+          alsoResize: "#microsoft"
+        }
+                                );
+        
+        $("#apple").resizable({
+          containment: "#container",
+          animate: true
+        }
+                             );
+      }
+       );
+      
+    </script>
+  </body>
+  
+</html>

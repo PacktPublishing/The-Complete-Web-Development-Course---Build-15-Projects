@@ -1,0 +1,18 @@
+url.parse vs WHATWG
+In the coming lecture, you can use the new WHATWG API by replacing:
+
+url.parse(request.url, true);
+
+with:
+
+const myURL = new URL(request.url, "http://127.0.0.1:3000/");
+
+
+
+To access query parameters, you will need:
+
+myURL.searchParams which can be iterated using forEach (instead of url.parse(request.url, true).query):
+
+myURL.searchParams.forEach(function(value, key) {
+            console.log(key, value);
+        });
